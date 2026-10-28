@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A static demo of the Shopping 1702 university shopping website.">
+  <title>Shopping 1702 — Storefront Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/shop-homepage.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#products">Skip to products</a>
+  <nav class="navbar navbar-inverse navbar-fixed-top" aria-label="Main navigation"><div class="container nav-inner"><a class="navbar-brand" href="#top">Online Shop</a><div class="nav-links"><a href="#about">About</a><a href="#products">Products</a><button id="cart-button" class="nav-cart" type="button">My Cart <span id="cart-count" class="cart-count">0</span></button></div></div></nav>
+  <main class="container" id="top">
+    <div class="alert alert-info demo-note" role="note"><strong>Portfolio demo:</strong> Products and prices are sample data from the university project. The cart runs only in this browser; orders and payments are disabled.</div>
+    <div class="row shop-layout">
+      <aside class="col-md-3 sidebar" aria-label="Product categories"><p class="lead">Shop Name</p><div class="list-group" id="category-list"><button class="list-group-item active" type="button" data-category="all" aria-pressed="true">All products</button><button class="list-group-item" type="button" data-category="Free Shirt" aria-pressed="false">Free Shirt</button><button class="list-group-item" type="button" data-category="Bag" aria-pressed="false">Bag</button><button class="list-group-item" type="button" data-category="Shoe" aria-pressed="false">Shoe</button><button class="list-group-item" type="button" data-category="Fancy Jewellery" aria-pressed="false">Fancy Jewellery</button></div><div class="sidebar-note"><strong>Original project</strong><p>A PHP and MySQL storefront with category browsing, product details, cart, orders, and an admin area.</p></div></aside>
+      <div class="col-md-9 shop-main">
+        <section class="carousel-holder" aria-label="Featured products"><div class="store-carousel"><img id="slide-image" class="slide-image" src="image/1.jpg" alt="Featured shopping collection"><div class="slide-shade"><span>SHOPPING 1702</span><strong>Find something<br>you love.</strong><a href="#products">Browse products ↗</a></div><button class="slide-control slide-control--prev" id="prev-slide" type="button" aria-label="Previous slide">‹</button><button class="slide-control slide-control--next" id="next-slide" type="button" aria-label="Next slide">›</button></div><div class="slide-dots" role="group" aria-label="Select featured slide"><button type="button" data-slide="0" class="active" aria-label="Slide 1" aria-pressed="true"></button><button type="button" data-slide="1" aria-label="Slide 2" aria-pressed="false"></button><button type="button" data-slide="2" aria-label="Slide 3" aria-pressed="false"></button></div></section>
+        <section id="products" aria-labelledby="products-title"><div class="products-header"><div><span class="overline">THE COLLECTION</span><h1 id="products-title">Browse products</h1></div><p id="result-count" aria-live="polite"></p></div><div class="product-grid" id="product-grid">
+          <article class="product-card" data-id="3" data-category="Bag"><img src="admin/image/img7.jpg" alt="Colorful bag" loading="lazy"><div class="product-copy"><span class="product-category">BAG</span><h2>Colorfulbag</h2><p>Best Choice</p><strong>Ks 15,000</strong><div class="product-actions"><button type="button" class="btn btn-success add-to-cart" data-id="3">Add to Cart</button><button type="button" class="btn btn-info view-detail" data-id="3">View detail</button></div></div></article>
+          <article class="product-card" data-id="4" data-category="Free Shirt"><img src="admin/image/4.jpg" alt="Couple shirt" loading="lazy"><div class="product-copy"><span class="product-category">FREE SHIRT</span><h2>Couple</h2><p>Sample shirt product</p><strong>Ks 1,200</strong><div class="product-actions"><button type="button" class="btn btn-success add-to-cart" data-id="4">Add to Cart</button><button type="button" class="btn btn-info view-detail" data-id="4">View detail</button></div></div></article>
+          <article class="product-card" data-id="5" data-category="Shoe"><img src="admin/image/img6.jpg" alt="Style shoe" loading="lazy"><div class="product-copy"><span class="product-category">SHOE</span><h2>Style Shoe</h2><p>Sample shoe product</p><strong>Ks 15,000</strong><div class="product-actions"><button type="button" class="btn btn-success add-to-cart" data-id="5">Add to Cart</button><button type="button" class="btn btn-info view-detail" data-id="5">View detail</button></div></div></article>
+          <article class="product-card" data-id="6" data-category="Fancy Jewellery"><img src="admin/image/img3.jpg" alt="Necklace" loading="lazy"><div class="product-copy"><span class="product-category">FANCY JEWELLERY</span><h2>Necklace</h2><p>Sample jewellery product</p><strong>Ks 20,000</strong><div class="product-actions"><button type="button" class="btn btn-success add-to-cart" data-id="6">Add to Cart</button><button type="button" class="btn btn-info view-detail" data-id="6">View detail</button></div></div></article>
+        </div><p id="empty-products" class="empty-products" hidden>No products in this category.</p></section>
+      </div>
+    </div>
+    <section id="about" class="about-shop"><h2>About this project</h2><p>Shopping 1702 is a university shopping website built with PHP, MySQL, JavaScript, and Bootstrap. This static demo keeps its storefront structure and lets you explore the sample catalogue and cart without connecting to a database.</p></section>
+  </main>
+  <footer class="container"><hr><p>Shopping 1702 · Static portfolio demo</p></footer>
+  <dialog id="shop-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title">My Cart</h2><button id="close-dialog" type="button" aria-label="Close dialog">×</button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
